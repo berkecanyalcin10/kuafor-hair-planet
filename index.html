@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kuaför Hair Planet | Kadın Kuaförü Tarabya, Sarıyer İstanbul</title>
+<meta name="description" content="Kuaför Hair Planet - Tarabya, Sarıyer'de profesyonel kadın kuaförü. Saç kesimi, boyama, bakım hizmetleri. 4.5/5 Google puanı, 116 yorum. Randevu: (0212) 223 29 38">
+<meta property="og:title" content="Kuaför Hair Planet | Kadın Kuaförü Tarabya, Sarıyer İstanbul">
+<meta property="og:description" content="Kuaför Hair Planet - Tarabya, Sarıyer'de profesyonel kadın kuaförü. Saç kesimi, boyama, bakım hizmetleri. 4.5/5 Google puanı, 116 yorum.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "Kuaför Hair Planet",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Tarabya Bayırı Cad. Han Çayırı Yolu Sok. Adalet Sitesi 1. Blok 64-1 D:1",
+    "addressLocality": "Sarıyer",
+    "addressRegion": "İstanbul",
+    "postalCode": "34457",
+    "addressCountry": "TR"
+  },
+  "telephone": "+902122232938",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "reviewCount": "116"
+  },
+  "openingHours": "Mo-Sa 09:00-20:00"
+}
+</script>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+  color: #2C2C2C;
+  background: #F5F0EB;
+  overflow-x: hidden;
+}
+
+/* VARIABLES */
+:root {
+  --gold: #C9A87C;
+  --bronze: #8B6F4E;
+  --cream: #F5F0EB;
+  --text: #2C2C2C;
+  --muted: #7A7A7A;
+  --white: #FFFFFF;
+  --wa: #25D366;
+}
+
+/* TYPOGRAPHY */
+h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; }
+.label-tag {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 16px;
+}
+
+/* NAVBAR */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: all 0.4s ease;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#navbar.scrolled {
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  padding: 14px 40px;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  transition: color 0.4s;
+}
+#navbar.scrolled .nav-logo { color: var(--text); }
+.nav-logo svg { width: 22px; height: 22px; }
+#navbar.scrolled .nav-logo svg path { stroke: var(--gold); }
+.nav-logo svg path { stroke: #fff; transition: stroke 0.4s; }
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+.nav-links a {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(255,255,255,0.9);
+  text-decoration: none;
+  transition: color 0.3s;
+  letter-spacing: 0.5px;
+}
+#navbar.scrolled .nav-links a { color: var(--text); }
+.nav-links a:hover { color: var(--gold); }
+.nav-cta {
+  background: var(--gold);
+  color: #fff !important;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  transition: background 0.3s, transform 0.2s !important;
+  white-space: nowrap;
+}
+.nav-cta:hover { background: var(--bronze) !important; transform: translateY(-1px); }
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 1100;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  transition: all 0.3s;
+  border-radius: 2px;
+}
+#navbar.scrolled .hamburger span { background: var(--text); }
+.hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); background: var(--text); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); background: var(--text); }
+.mobile-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: var(--cream);
+  z-index: 999;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.mobile-menu.open { opacity: 1; }
+.mobile-menu a {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.mobile-menu a:hover { color: var(--gold); }
+.mobile-menu .m-cta {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
+  background: var(--gold);
+  color: #fff;
+  padding: 14px 36px;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+/* HERO */
+#hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1600&q=80&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.7);
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(44,26,10,0.6) 0%, rgba(0,0,0,0.1) 50%, transparent 100%);
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 20px;
+  max-width: 700px;
+}
+.hero-label {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeUp 0.8s forwards 0.3s;
+}
+.hero-h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 64px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeUp 0.8s forwards 0.6s;
+}
+.hero-sub {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.7;
+  margin-bottom: 28px;
+  opacity: 0;
+  animation: fadeUp 0.8s forwards 0.9s;
+}
+.hero-divider {
+  width: 60px;
+  height: 2px;
+  background: var(--gold);
+  margin: 0 auto 24px;
+  opacity: 0;
+  animation: fadeIn 0.8s forwards 1.1s;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 50px;
+  padding: 8px 20px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 32px;
+  opacity: 0;
+  animation: fadeUp 0.8s forwards 1.2s;
+}
+.hero-btns {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp 0.8s forwards 1.4s;
+}
+.btn-primary {
+  background: var(--gold);
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  box-shadow: 0 4px 20px rgba(201,168,124,0.4);
+  transition: all 0.3s;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+}
+.btn-primary:hover { background: var(--bronze); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(201,168,124,0.5); }
+.btn-secondary {
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  border: 2px solid rgba(255,255,255,0.8);
+  transition: all 0.3s;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+}
+.btn-secondary:hover { background: rgba(255,255,255,0.15); transform: translateY(-2px); }
+.scroll-indicator {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  opacity: 0;
+  animation: fadeIn 1s forwards 2s;
+}
+.scroll-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.6));
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.4; transform: scaleY(1); }
+  50% { opacity: 1; transform: scaleY(1.2); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* SECTIONS COMMON */
+section { position: relative; }
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+
+/* ABOUT */
+#about {
+  background: var(--white);
+  padding: 100px 0;
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.about-text h2 {
+  font-size: 42px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+.about-text p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--text);
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+.stats-row {
+  display: flex;
+  gap: 40px;
+}
+.stat-item { text-align: center; }
+.stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  display: block;
+}
+.stat-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 6px;
+  display: block;
+}
+.about-img-wrap {
+  position: relative;
+}
+.about-img-frame {
+  position: absolute;
+  inset: 0;
+  transform: translate(15px, 15px);
+  border: 2px solid var(--gold);
+  border-radius: 16px;
+  opacity: 0.5;
+  z-index: 0;
+}
+.about-img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 480px;
+  border-radius: 16px;
+  object-fit: cover;
+  display: block;
+}
+.about-img-placeholder {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 480px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #e8d5c0 0%, #d4b896 50%, #c9a87c 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.about-img-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* SERVICES */
+#services {
+  background: var(--cream);
+  padding: 100px 0;
+}
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.section-header h2 {
+  font-size: 42px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+.section-header p {
+  font-size: 16px;
+  color: var(--muted);
+  font-weight: 300;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 52px;
+}
+.service-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 36px 28px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  transition: all 0.35s ease;
+  border-top: 3px solid transparent;
+  cursor: default;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.service-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+  border-top-color: var(--gold);
+}
+.service-icon {
+  width: 64px;
+  height: 64px;
+  background: var(--cream);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+.service-icon svg { width: 28px; height: 28px; }
+.service-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+.service-card p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+  font-weight: 300;
+}
+.services-cta {
+  text-align: center;
+}
+.btn-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--gold);
+  color: #fff;
+  padding: 16px 36px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s;
+  min-height: 54px;
+}
+.btn-phone:hover { background: var(--bronze); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(201,168,124,0.4); }
+
+/* TESTIMONIALS */
+#testimonials {
+  background: var(--white);
+  padding: 100px 0;
+}
+.rating-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--cream);
+  border-radius: 50px;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin-top: 16px;
+  margin-bottom: 52px;
+}
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 44px;
+}
+.test-card {
+  background: var(--cream);
+  border-radius: 16px;
+  padding: 32px;
+}
+.stars {
+  font-size: 16px;
+  color: var(--gold);
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+}
+.test-card blockquote {
+  font-size: 15px;
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.8;
+  margin-bottom: 22px;
+  font-weight: 300;
+}
+.test-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.g-icon {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: #4285F4;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+.g-label {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 600;
+}
+.all-reviews-link {
+  text-align: center;
+}
+.all-reviews-link a {
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s;
+  letter-spacing: 0.3px;
+}
+.all-reviews-link a:hover { color: var(--bronze); }
+
+/* CONTACT */
+#contact {
+  background: var(--cream);
+  padding: 100px 0;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact-card {
+  background: var(--white);
+  border-radius: 14px;
+  padding: 24px 28px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+.contact-card-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--cream);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.contact-card-icon svg { width: 20px; height: 20px; }
+.contact-card-body {}
+.contact-card-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 6px;
+}
+.contact-card-value {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.5;
+}
+.contact-card-value a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.contact-card-value a:hover { color: var(--gold); }
+.wa-value a { color: var(--wa); font-weight: 600; }
+.contact-hint {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 4px;
+  display: block;
+}
+.map-wrap {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  height: 100%;
+  min-height: 420px;
+}
+.map-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  min-height: 420px;
+}
+.contact-wa-cta {
+  text-align: center;
+}
+.btn-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--wa);
+  color: #fff;
+  padding: 18px 44px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 17px;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+  transition: all 0.3s;
+  min-height: 56px;
+}
+.btn-wa:hover { background: #1ebe5d; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(37,211,102,0.45); }
+
+/* FOOTER */
+footer {
+  background: #2C2C2C;
+  padding: 60px 40px 0;
+}
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 48px;
+}
+.footer-brand {}
+.footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #fff;
+  display: block;
+  margin-bottom: 8px;
+}
+.footer-tagline {
+  font-size: 13px;
+  color: #7A7A7A;
+  font-weight: 300;
+}
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+.footer-nav a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+.footer-nav a:hover { color: var(--gold); }
+.footer-contact-col {
+  text-align: right;
+}
+.footer-contact-col p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.8;
+}
+.footer-contact-col a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer-contact-col a:hover { color: var(--gold); }
+.footer-divider {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 1px;
+  background: #444;
+}
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 0;
+  text-align: center;
+}
+.footer-bottom p {
+  font-size: 13px;
+  color: #7A7A7A;
+}
+
+/* FLOATING WHATSAPP */
+#float-wa {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--wa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(37,211,102,0.4);
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: waPulse 5s ease-in-out infinite;
+}
+#float-wa:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 24px rgba(37,211,102,0.55);
+  animation: none;
+}
+#float-wa svg { width: 30px; height: 30px; }
+@keyframes waPulse {
+  0%, 85%, 100% { transform: scale(1); box-shadow: 0 4px 12px rgba(37,211,102,0.4); }
+  90% { transform: scale(1.08); box-shadow: 0 6px 20px rgba(37,211,102,0.55); }
+}
+.wa-tooltip {
+  position: fixed;
+  bottom: 94px;
+  right: 24px;
+  background: var(--text);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  z-index: 8999;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: all 0.4s;
+  pointer-events: none;
+}
+.wa-tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  right: 20px;
+  border: 6px solid transparent;
+  border-top-color: var(--text);
+  border-bottom: none;
+}
+.wa-tooltip.show { opacity: 1; transform: translateY(0); }
+
+/* MOBILE STICKY BAR */
+#mobile-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 800;
+  background: #fff;
+  box-shadow: 0 -2px 16px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.4s;
+}
+#mobile-bar.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.mobile-bar-inner {
+  display: flex;
+}
+.mobile-bar-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  min-height: 54px;
+  transition: all 0.3s;
+}
+.mobile-bar-btn.call { background: var(--gold); color: #fff; }
+.mobile-bar-btn.call:hover { background: var(--bronze); }
+.mobile-bar-btn.whatsapp { background: var(--wa); color: #fff; }
+.mobile-bar-btn.whatsapp:hover { background: #1ebe5d; }
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .testimonials-grid { grid-template-columns: repeat(2, 1fr); overflow-x: auto; }
+  .about-grid { gap: 48px; }
+}
+@media (max-width: 768px) {
+  #navbar { padding: 16px 20px; }
+  #navbar.scrolled { padding: 12px 20px; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  
+  .hero-h1 { font-size: 36px; }
+  .hero-sub { font-size: 16px; }
+  
+  #about, #services, #testimonials, #contact { padding: 60px 0; }
+  .section-inner { padding: 0 20px; }
+  
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-grid .about-img-wrap { order: -1; }
+  .about-img-placeholder { height: 320px; }
+  .about-text h2 { font-size: 30px; }
+  .stats-row { gap: 24px; }
+  
+  .section-header h2 { font-size: 30px; }
+  .services-grid { grid-template-columns: 1fr; gap: 20px; }
+  
+  .testimonials-grid {
+    grid-template-columns: repeat(3, 280px);
+    overflow-x: auto;
+    padding-bottom: 12px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .testimonials-grid::-webkit-scrollbar { display: none; }
+  .test-card { scroll-snap-align: start; }
+  
+  .contact-grid { grid-template-columns: 1fr; }
+  .map-wrap { min-height: 280px; }
+  .map-wrap iframe { min-height: 280px; }
+  
+  footer { padding: 48px 20px 0; }
+  .footer-inner { grid-template-columns: 1fr; gap: 36px; text-align: center; }
+  .footer-contact-col { text-align: center; }
+  .footer-nav { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+  
+  #mobile-bar { display: block; }
+  #float-wa { bottom: 76px; }
+  .wa-tooltip { bottom: 144px; }
+  
+  .rating-badge { font-size: 13px; }
+}
+@media (max-width: 480px) {
+  .hero-h1 { font-size: 32px; }
+  .hero-btns { flex-direction: column; align-items: center; }
+  .btn-primary, .btn-secondary { width: 100%; max-width: 280px; justify-content: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar" role="navigation" aria-label="Ana Navigasyon">
+  <a href="#hero" class="nav-logo">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 3C6 3 4 7 4 10C4 12.2 5.3 14 7 14.7V21" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M10 3C10 3 12 7 12 10C12 12.2 10.7 14 9 14.7V21" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M14 6C14 6 17 8.5 17 11C17 13 15.8 14.5 14 15.2V21" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M4 17H10" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+    Hair Planet
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">Hakkımızda</a></li>
+    <li><a href="#services">Hizmetler</a></li>
+    <li><a href="#testimonials">Yorumlar</a></li>
+    <li><a href="#contact">İletişim</a></li>
+    <li><a href="https://wa.me/902122232938?text=Merhaba%2C%20randevu%20almak%20istiyorum" target="_blank" rel="noopener" class="nav-cta">Randevu Al</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" aria-label="Menü" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" class="mm-link">Hakkımızda</a>
+  <a href="#services" class="mm-link">Hizmetler</a>
+  <a href="#testimonials" class="mm-link">Yorumlar</a>
+  <a href="#contact" class="mm-link">İletişim</a>
+  <a href="https://wa.me/902122232938?text=Merhaba%2C%20randevu%20almak%20istiyorum" target="_blank" rel="noopener" class="m-cta">Randevu Al</a>
+</div>
+
+<!-- HERO -->
+<section id="hero" aria-label="Ana Görsel">
+  <div class="hero-bg" role="img" aria-label="Kuaför Hair Planet Tarabya Sarıyer salon içi"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-label">Tarabya, Sarıyer · İstanbul</div>
+    <h1 class="hero-h1">Kuaför Hair Planet</h1>
+    <p class="hero-sub">Yıllardır güvenle tercih edilen adresiniz. Profesyonel saç bakımı ve stil hizmetleri.</p>
+    <div class="hero-divider"></div>
+    <div class="hero-badge">⭐ 4.5/5 puan · 116 Google yorumu</div>
+    <div class="hero-btns">
+      <a href="https://wa.me/902122232938?text=Merhaba%2C%20randevu%20almak%20istiyorum" class="btn-primary" target="_blank" rel="noopener">Randevu Al</a>
+      <a href="#about" class="btn-secondary">Bizi Tanıyın</a>
+    </div>
+  </div>
+  <div class="scroll-indicator" aria-hidden="true">
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" aria-labelledby="about-heading">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-text fade-up">
+        <span class="label-tag">Hakkımızda</span>
+        <h2 id="about-heading">Tarabya'nın Güvenilir Güzellik Adresi</h2>
+        <p>Hair Planet olarak yıllardır Tarabya ve Sarıyer bölgesinde kadın kuaförü hizmeti sunuyoruz. Profesyonel ekibimiz ile saç kesimi, saç boyama, bakım ve stil hizmetlerinde uzmanlaşmış kadromuzla sizi bekliyoruz. Müşterilerimizin memnuniyeti ve güveni bizim en büyük motivasyonumuzdur. Ailecek gelebileceğiniz, sıcak ve samimi ortamımızda kendinizi özel hissedeceksiniz.</p>
+        <div class="stats-row">
+          <div class="stat-item">
+            <span class="stat-num" data-target="15" data-suffix="+">0</span>
+            <span class="stat-label">Yıllık Deneyim</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num" data-target="116" data-suffix="">0</span>
+            <span class="stat-label">Google Yorumu</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num" data-target="4.5" data-suffix="/5" data-decimal="true">0</span>
+            <span class="stat-label">Müşteri Puanı</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-img-wrap fade-up" style="transition-delay:0.2s">
+        <div class="about-img-frame" aria-hidden="true"></div>
+        <div class="about-img-placeholder">
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80&auto=format&fit=crop" alt="Kuaför Hair Planet Tarabya Sarıyer salon iç mekan" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" aria-labelledby="services-heading">
+  <div class="section-inner">
+    <div class="section-header fade-up">
+      <span class="label-tag" style="text-align:center;display:block;">Hizmetlerimiz</span>
+      <h2 id="services-heading">Profesyonel Saç ve Güzellik Hizmetleri</h2>
+      <p>Uzman ekibimizle size özel bakım ve stil çözümleri sunuyoruz.</p>
+    </div>
+    <div class="services-grid">
+      <!-- Card 1 -->
+      <div class="service-card" style="transition-delay:0s">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#C9A87C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 3L8 8L6 10.5C5 11.5 5 13 6 14C7 15 8.5 15 9.5 14L12 11.5L15 14.5C15.5 15 16 15 16.5 14.5L17 14C17.5 13.5 17.5 13 17 12.5L8 3.5C7.5 3 7 3 6.5 3.5L6 3Z"/>
+            <path d="M12 11.5L17 16.5C17.5 17 17.5 17.5 17 18L16.5 18.5C16 19 15.5 19 15 18.5L10 13.5"/>
+          </svg>
+        </div>
+        <h3>Saç Kesimi</h3>
+        <p>Yüz şeklinize ve tarzınıza uygun profesyonel saç kesim hizmeti.</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="service-card" style="transition-delay:0.1s">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#C9A87C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/>
+            <path d="M12 2V4M12 20V22M4.22 4.22L5.64 5.64M18.36 18.36L19.78 19.78M2 12H4M20 12H22M4.22 19.78L5.64 18.36M18.36 5.64L19.78 4.22"/>
+          </svg>
+        </div>
+        <h3>Saç Boyama</h3>
+        <p>Sıfır yıpranma ile istediğiniz renge kavuşun. Uzman renklendirme hizmeti.</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="service-card" style="transition-delay:0.2s">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#C9A87C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3C12 3 8 7 8 11C8 13.2 9.8 15 12 15C14.2 15 16 13.2 16 11C16 7 12 3 12 3Z"/>
+            <path d="M12 15V21"/>
+            <path d="M9 18H15"/>
+          </svg>
+        </div>
+        <h3>Saç Bakımı</h3>
+        <p>Keratin, botoks ve onarım bakımları ile sağlıklı, parlak saçlar.</p>
+      </div>
+      <!-- Card 4 -->
+      <div class="service-card" style="transition-delay:0.3s">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#C9A87C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 8C5 8 3 10 3 13C3 15.8 5.2 18 8 18C10.8 18 13 15.8 13 13C13 9 10 5 10 5"/>
+            <path d="M13 7C14 5 16.5 4 18.5 5C20.5 6 21 8.5 20 10.5C19 12 17 12.5 15 12"/>
+            <path d="M10 13H20"/>
+          </svg>
+        </div>
+        <h3>Fön & Styling</h3>
+        <p>Günlük fön, özel gün saç tasarımı ve stil hizmetleri.</p>
+      </div>
+      <!-- Card 5 -->
+      <div class="service-card" style="transition-delay:0.4s">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#C9A87C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L13.5 7H18.5L14.5 10L16 15L12 12L8 15L9.5 10L5.5 7H10.5L12 2Z"/>
+            <path d="M8 20H16"/>
+            <path d="M12 15V20"/>
+          </svg>
+        </div>
+        <h3>Gelin Saçı</h3>
+        <p>En özel gününüz için hayalinizdeki gelin saçı tasarımı.</p>
+      </div>
+      <!-- Card 6 -->
+      <div class="service-card" style="transition-delay:0.5s">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#C9A87C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22C12 22 4 18 4 12V5L12 2L20 5V12C20 18 12 22 12 22Z"/>
+            <path d="M9 12L11 14L15 10"/>
+          </svg>
+        </div>
+        <h3>Cilt Bakımı</h3>
+        <p>Profesyonel cilt bakımı ve güzellik uygulamaları.</p>
+      </div>
+    </div>
+    <div class="services-cta fade-up">
+      <a href="tel:02122232938" class="btn-phone">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 7 7l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Randevu İçin Bizi Arayın: (0212) 223 29 38
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" aria-labelledby="testimonials-heading">
+  <div class="section-inner">
+    <div class="section-header fade-up">
+      <span class="label-tag" style="display:block;text-align:center;">Müşteri Yorumları</span>
+      <h2 id="testimonials-heading">Müşterilerimiz Ne Diyor?</h2>
+      <div style="display:flex;justify-content:center;">
+        <div class="rating-badge">⭐⭐⭐⭐⭐ Google'da 4.5/5 puan · 116 değerlendirme</div>
+      </div>
+    </div>
+    <div class="testimonials-grid fade-up">
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Yıllardır saçlarımı güvenle teslim ettiğim tek adres. Yurt dışında yaşadığım dönem bile Can Bey bir saç keserdi 1 sene tatile gelene kadar kullanırdım. Sarıya dönmek istedim sıfır yıpranmayla istediğim sonucu aldım."</blockquote>
+        <div class="test-footer">
+          <div class="g-icon">G</div>
+          <span class="g-label">Google Yorumu</span>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Senelerdir ailecek geldiğimiz kuaförümüz. İşini ustalıkla yapan profesyoneller ve güzel kalpli insanlarla dolup taşan sıcacık bir yer. İyi ki varsın Hair Planet, seni çok seviyoruz!"</blockquote>
+        <div class="test-footer">
+          <div class="g-icon">G</div>
+          <span class="g-label">Google Yorumu</span>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Yıllardır vazgeçilmezim olan yer. Tek hizmetle başlayıp, diğerleriyle sıra sıra devam ediyorum. Sundukları hizmetler zaten bölgenin değerini artırıyor resmen."</blockquote>
+        <div class="test-footer">
+          <div class="g-icon">G</div>
+          <span class="g-label">Google Yorumu</span>
+        </div>
+      </div>
+    </div>
+    <div class="all-reviews-link fade-up">
+      <a href="https://maps.google.com/?q=Kuaför+Hair+Planet+Tarabya+Sarıyer+İstanbul" target="_blank" rel="noopener">Google'da Tüm Yorumları Görüntüle →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" aria-labelledby="contact-heading">
+  <div class="section-inner">
+    <div class="section-header fade-up">
+      <span class="label-tag" style="display:block;text-align:center;">İletişim</span>
+      <h2 id="contact-heading">Bize Ulaşın</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-cards fade-up">
+        <!-- Phone -->
+        <div class="contact-card">
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#C9A87C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 7 7l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="contact-card-body">
+            <span class="contact-card-label">Telefon</span>
+            <div class="contact-card-value"><a href="tel:02122232938">(0212) 223 29 38</a></div>
+          </div>
+        </div>
+        <!-- WhatsApp -->
+        <div class="contact-card">
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24" fill="#25D366" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          </div>
+          <div class="contact-card-body wa-value">
+            <span class="contact-card-label">WhatsApp</span>
+            <div class="contact-card-value"><a href="https://wa.me/902122232938?text=Merhaba%2C%20randevu%20almak%20istiyorum" target="_blank" rel="noopener">(0212) 223 29 38</a></div>
+            <span class="contact-hint">Hızlı randevu için yazın</span>
+          </div>
+        </div>
+        <!-- Address -->
+        <div class="contact-card">
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#C9A87C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="contact-card-body">
+            <span class="contact-card-label">Adres</span>
+            <div class="contact-card-value">Tarabya Bayırı Cad. / Han Çayırı Yolu Sok. Adalet Sitesi 1. Blok 64-1 D:1, 34457 Sarıyer/İstanbul</div>
+          </div>
+        </div>
+        <!-- Hours -->
+        <div class="contact-card">
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#C9A87C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="contact-card-body">
+            <span class="contact-card-label">Çalışma Saatleri</span>
+            <div class="contact-card-value">
+              Pazartesi – Cumartesi: 09:00 – 20:00<br>
+              <span style="color:#7A7A7A;font-size:13px;">Pazar: Kapalı</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="map-wrap fade-up" style="transition-delay:0.2s">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3004.3547889893!2d29.060000!3d41.185000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cafd0000000001%3A0x0!2zS3VhZsO2ciBIYWlyIFBsYW5ldA!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Kuaför Hair Planet Tarabya Sarıyer İstanbul Harita"
+          aria-label="Google Haritalar - Kuaför Hair Planet konumu">
+        </iframe>
+      </div>
